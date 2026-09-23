@@ -150,3 +150,38 @@ footer p {
     font-size: 0.9rem;
     margin: 0.4rem 0;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 1rem auto;
+}
+
+
+footer img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+footer.Jobb {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+footer.Jobb img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+}
+.card footer.Jobb img {
+    width: 300px;       
+    height: 300px;      
+    object-fit: cover;  
+    border-radius: 8px; 
+    margin: 0;          
+}
