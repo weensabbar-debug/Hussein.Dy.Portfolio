@@ -1,22 +1,14 @@
-:root {
-    --bg-color: #0f172a;       
-    --card-bg: #1e293b;        
-    --text-primary: #f8fafc;   
-    --text-secondary: #94a3b8; 
-    --accent: #06b6d4;         
-    --accent-hover: #22d3ee;   
-}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    padding: 2rem 1rem;
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: sans-serif;
     margin: 0;
+    padding: 20px;
     line-height: 1.6;
 }
 
@@ -25,80 +17,65 @@ body {
     margin: 0 auto;
 }
 
-
 header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
-    color: var(--text-primary);
-    letter-spacing: -0.5px;
+    font-size: 2rem;
+    margin-bottom: 5px;
 }
 
 .subtitle {
-    color: var(--accent);
-    font-weight: 500;
-    font-size: 1.1rem;
+    color: #06b6d4;
     margin: 0;
 }
-
-
 nav {
     display: flex;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--text-primary);
-    background-color: var(--card-bg);
-    padding: 0.6rem 1.2rem;
+    color: #f8fafc;
+    background-color: #1e293b;
+    padding: 10px 15px;
     border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.2s ease;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav a:hover {
-    background-color: var(--accent);
+nav a:hover, nav a.active {
+    background-color: #06b6d4;
     color: #0f172a;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 }
-
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .card {
-    background-color: var(--card-bg);
-    padding: 1.8rem;
-    margin-bottom: 1.5rem;
+    background-color: #1e293b;
+    padding: 25px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
-.card h2 {
-    color: var(--accent);
+.card h1, .card h2 {
+    color: #06b6d4;
     margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    text-align: left;
-    border-bottom: 2px solid rgba(6, 182, 212, 0.2);
-    padding-bottom: 0.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #06b6d4;
+    padding-bottom: 5px;
 }
 
 .card p {
-    color: var(--text-secondary);
+    color: #94a3b8;
     margin: 0;
 }
-
-
 .experience-list {
     list-style: none;
     padding: 0;
@@ -106,67 +83,45 @@ nav a:hover {
 }
 
 .experience-list li {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    border-left: 3px solid var(--accent);
+    color: #94a3b8;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #06b6d4;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.experience-list li:last-child {
-    margin-bottom: 0;
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
-
-.experience-list strong {
-    color: var(--text-primary);
-}
-
-
 .btn {
     display: inline-block;
-    background-color: var(--accent);
+    background-color: #06b6d4;
     color: #0f172a;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
+    padding: 10px 20px;
     border-radius: 8px;
-    font-weight: 700;
-    transition: all 0.2s ease;
-    border: none;
-}
-
-.btn:hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(34, 211, 238, 0.4);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
-    margin-top: 2.5rem;
-    padding-top: 1rem;
-}
-
-footer p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0.4rem 0;
-}
-nav a:focus, .btn:focus {
-    outline: 2px solid var(--accent);
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    margin-top: 40px;
+    color: #94a3b8;
 }
 
 @media (min-width: 650px) {
-    #container { 
-        max-width: 800px; 
+    #container {
+        max-width: 800px;
     }
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+
+    .image-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
